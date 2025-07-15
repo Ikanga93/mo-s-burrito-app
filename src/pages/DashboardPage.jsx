@@ -48,6 +48,7 @@ import {
 } from 'lucide-react'
 import { useBusinessConfig } from '../context/BusinessContext'
 import DashboardHeader from '../components/DashboardHeader'
+import MarketingBar from '../components/MarketingBar'
 import AdminLocationSelector from '../components/AdminLocationSelector'
 import ApiService from '../services/ApiService'
 import io from 'socket.io-client'
@@ -3248,6 +3249,9 @@ const DashboardPage = ({ onLogout }) => {
         onTabChange={setActiveTab}
         onLogout={onLogout}
       />
+      
+      {/* Marketing Bar */}
+      <MarketingBar />
       
       {/* Location Selector for Multi-Location Users */}
       {currentUser && (
